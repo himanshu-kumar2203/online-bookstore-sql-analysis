@@ -59,5 +59,14 @@ ORDER BY order_count DESC
 LIMIT 1;
 ```
 
+### Top Customer by Spending
+```sq3
+SELECT Customer_ID, SUM(total_amount) AS total_spent
+FROM Orders
+GROUP BY Customer_ID
+ORDER BY total_spent DESC
+LIMIT 1;
+```
+
 ##  Author
 Himanshu Kumar
